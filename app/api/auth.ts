@@ -27,7 +27,7 @@ function parseApiKey(bearToken: string) {
 }
 
 export function auth(req: NextRequest) {
-  const authToken = req.headers.get("Authorization") ?? "";
+  const authToken = req.headers.get("Authorization2") ?? "";
 
   // check if it is openai api key or user token
   const { accessCode, apiKey: token } = parseApiKey(authToken);
@@ -54,7 +54,7 @@ export function auth(req: NextRequest) {
     console.log("serverConfig.apiKey", serverConfig.apiKey);
     if (apiKey) {
       console.log("[Auth] use system api key");
-      req.headers.set("Authorization", `Bearer ${apiKey}`);
+      req.headers.set("Authorization2", `Bearer ${apiKey}`);
     } else {
       console.log("[Auth] admin did not provide an api key");
       return {
