@@ -28,7 +28,7 @@ export const AllLangs = [
 export type Lang = (typeof AllLangs)[number];
 
 const LANG_KEY = "lang";
-const DEFAULT_LANG = "en";
+const DEFAULT_LANG = "cn";
 
 function getItem(key: string) {
   try {
@@ -46,9 +46,11 @@ function setItem(key: string, value: string) {
 
 function getLanguage() {
   try {
-    return navigator.language.toLowerCase();
+    return "cn";
+    //console.log(navigator.language.toLowerCase());
+    //return navigator.language.toLowerCase();
   } catch {
-    console.log("[Lang] failed to detect user lang.");
+    console.log("[Lang] failed to detect user lang.", DEFAULT_LANG);
     return DEFAULT_LANG;
   }
 }

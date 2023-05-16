@@ -662,6 +662,7 @@ export function Chat() {
               }}
             />
           </div>
+          {/*
           {!isMobileScreen && (
             <div className="window-action-button">
               <IconButton
@@ -675,6 +676,7 @@ export function Chat() {
               />
             </div>
           )}
+		 */}
         </div>
 
         <PromptToast
@@ -788,8 +790,8 @@ export function Chat() {
       </div>
 
       <div className={styles["chat-input-panel"]}>
-        <PromptHints prompts={promptHints} onPromptSelect={onPromptSelect} />
-
+        {/*<PromptHints prompts={promptHints} onPromptSelect={onPromptSelect} />
+		
         <ChatActions
           showPromptModal={() => setShowPromptModal(true)}
           scrollToBottom={scrollToBottom}
@@ -806,6 +808,7 @@ export function Chat() {
             onSearch("");
           }}
         />
+		*/}
         <div className={styles["chat-input-panel-inner"]}>
           <textarea
             ref={inputRef}
