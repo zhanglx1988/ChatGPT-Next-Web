@@ -15,7 +15,7 @@ async function handle(
   //     status: 401,
   //   });
   // }
-
+  console.log("skip auth");
   try {
     return await requestOpenai(req);
   } catch (e) {
